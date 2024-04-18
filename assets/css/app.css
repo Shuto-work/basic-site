@@ -1,0 +1,595 @@
+@charset "UTF-8";
+/*// ==========================================================================
+// Foundation
+// ==========================================================================*/
+/* Box sizing rules */
+/* Box sizingの定義 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* デフォルトのpaddingを削除 */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+/* デフォルトのmarginを削除 */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+/* bodyのデフォルトを定義 */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+/* class属性を持つul、ol要素のリストスタイルを削除 */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* classを持たない要素はデフォルトのスタイルを取得 */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* img要素の扱いを簡単にする */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+/* article要素内の要素に自然な流れとリズムを定義 */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* inputやbuttonなどのフォントは継承を定義 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+/* 見たくない人用に、すべてのアニメーションとトランジションを削除 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Box sizing rules */
+/* Box sizingの定義 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* デフォルトのpaddingを削除 */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+/* デフォルトのmarginを削除 */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+/* bodyのデフォルトを定義 */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+/* class属性を持つul、ol要素のリストスタイルを削除 */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* classを持たない要素はデフォルトのスタイルを取得 */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* img要素の扱いを簡単にする */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+/* article要素内の要素に自然な流れとリズムを定義 */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* inputやbuttonなどのフォントは継承を定義 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+/* 見たくない人用に、すべてのアニメーションとトランジションを削除 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+img {
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.5;
+}
+
+/*// ==========================================================================
+// Layout
+// ==========================================================================*/
+.l-header {
+  position: relative;
+}
+
+.l-header__inner {
+  z-index: 1;
+  position: absolute;
+  width: 100vw;
+}
+
+@media screen and (min-width: 796px) {
+  .l-about {
+    padding: 100px 50px;
+  }
+}
+@media screen and (max-width: 795px) {
+  .l-about {
+    padding: 70px 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .l-about {
+    padding: 70px 15px;
+  }
+}
+
+.l-work {
+  background-color: #ececec;
+}
+@media screen and (min-width: 796px) {
+  .l-work {
+    padding: 100px 50px;
+  }
+}
+@media screen and (max-width: 795px) {
+  .l-work {
+    padding: 70px 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .l-work {
+    padding: 70px 15px;
+  }
+}
+
+@media screen and (min-width: 796px) {
+  .l-blog {
+    padding: 100px 50px;
+  }
+}
+@media screen and (max-width: 795px) {
+  .l-blog {
+    padding: 70px 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .l-blog {
+    padding: 70px 15px;
+  }
+}
+
+/*// ==========================================================================
+// Object
+// ==========================================================================*/
+/*// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------*/
+.c-section {
+  position: relative;
+}
+
+.c-section__title {
+  text-align: center;
+}
+.c-section__title::after {
+  content: "";
+  position: absolute;
+  border-bottom: solid 2px #ffbf00;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100px;
+}
+
+.c-section__heading {
+  font-weight: bold;
+  color: #505050;
+  font-size: 2.1rem;
+  letter-spacing: 2px;
+}
+
+.c-section__text {
+  color: #7c7c7c;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 320px) {
+  .c-section__heading {
+    font-size: 1.9rem;
+  }
+  .c-section__text {
+    font-size: 1rem;
+  }
+}
+/*// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------*/
+@media screen and (min-width: 796px) {
+  .p-header {
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: relative;
+  }
+  .p-header__logo {
+    width: 50px;
+    height: auto;
+  }
+  .p-header,
+  .p-header__nav-list {
+    display: flex;
+  }
+  .p-header__nav-list {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .p-header__nav-item {
+    list-style: none;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 795px) {
+  .p-header__hamburger {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .p-header__hamburger-line {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+  .p-header__hamburger-line:nth-child(1) {
+    top: 10px;
+  }
+  .p-header__hamburger-line:nth-child(2) {
+    top: 20px;
+  }
+}
+.p-firstView {
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  position: relative;
+}
+@media screen and (min-width: 796px) {
+  .p-firstView {
+    height: 105vh;
+  }
+}
+@media screen and (max-width: 795px) {
+  .p-firstView {
+    height: 91vh;
+  }
+}
+@media screen and (max-width: 320px) {
+  .p-firstView {
+    height: 64vh;
+  }
+}
+
+.p-firstView__title {
+  color: #ffffff;
+  font-weight: bolder;
+  position: absolute;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 796px) {
+  .p-firstView__title {
+    font-size: 3.8rem;
+  }
+}
+@media screen and (max-width: 795px) {
+  .p-firstView__title {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .p-firstView__title {
+    font-size: 2.5rem;
+  }
+  .p-firstView__title span {
+    display: block;
+    text-align: center;
+  }
+}
+
+.p-about {
+  margin-top: 50px;
+}
+
+.p-about__img {
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 796px) {
+  .p-about__imgBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+  }
+  .p-about__img {
+    height: 300px;
+  }
+  .p-about__imgBig {
+    width: 60%;
+  }
+  .p-about__imgSmall {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 795px) {
+  .p-about__img {
+    margin-top: 20px;
+    height: 200px;
+    width: 100%;
+  }
+  .p-about__img:first-child {
+    margin-top: 0;
+  }
+}
+.p-work {
+  margin-top: 50px;
+}
+
+.p-work__box {
+  text-align: center;
+}
+
+.p-work__icon {
+  margin: 0 auto;
+  width: 55px;
+}
+
+.p-work__heading {
+  color: #505050;
+  margin-top: 20px;
+}
+
+.p-work__caption {
+  color: #7c7c7c;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 796px) {
+  .p-work__boxWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .p-work__box {
+    width: 30%;
+  }
+  .p-work__caption {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 795px) {
+  .p-work__box {
+    margin-top: 50px;
+  }
+  .p-work__box:first-child {
+    margin-top: 0;
+  }
+  .p-work__heading {
+    font-size: 1.2rem;
+  }
+  .p-work__caption {
+    font-size: 0.95rem;
+  }
+}
+.p-blog {
+  margin-top: 50px;
+}
+
+.p-blog__headingBox {
+  margin-top: 10px;
+}
+
+.p-blog__heading {
+  color: #505050;
+  font-size: 1.3rem;
+}
+
+.p-blog__caption {
+  color: #7c7c7c;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.p-blog__btn--more {
+  display: inline-block;
+  text-align: center;
+  background-color: #ffbf00;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  height: 50px;
+  line-height: 50px;
+}
+@media screen and (min-width: 796px) {
+  .p-blog__btn--more {
+    width: 80px;
+    margin-top: 35px;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 795px) {
+  .p-blog__btn--more {
+    width: 100%;
+    margin-top: 45px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .p-blog__btn--more {
+    font-size: 0.7rem;
+    height: 45px;
+    line-height: 45px;
+  }
+}
+
+.p-blog__content {
+  margin-top: 50px;
+}
+.p-blog__content:first-child {
+  margin-top: 0px;
+}
+
+@media screen and (min-width: 796px) {
+  .p-blog__content {
+    display: flex;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .p-blog__content:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  .p-blog__img {
+    width: 380px;
+    height: 260px;
+  }
+  .p-blog__headingBox {
+    flex: 1 1 auto;
+  }
+}
+@media screen and (max-width: 795px) {
+  .p-blog__headingBox {
+    margin-top: 20px;
+  }
+  .p-blog__caption {
+    font-size: 0.9rem;
+  }
+}
+/*// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------*/
+.u-hidden {
+  display: none !important;
+}
+
+@media screen and (min-width: 796px) {
+  .u-hidden-pc {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 795px) {
+  .u-hidden-sp {
+    display: none !important;
+  }
+}
+.u-mb-10 {
+  margin-bottom: 10px !important;
+}/*# sourceMappingURL=app.css.map */

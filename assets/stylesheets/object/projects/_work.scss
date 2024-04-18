@@ -1,0 +1,58 @@
+.p-work {
+  margin-top: 50px;
+}
+
+.p-work__box {
+  text-align: center;
+}
+
+.p-work__icon {
+  margin: 0 auto;
+  width: 55px;
+}
+
+.p-work__heading {
+  color: #505050;
+  margin-top: 20px;
+}
+
+.p-work__caption {
+  color: #7c7c7c;
+  margin-top: 20px;
+}
+
+@include breakPoint("pc") {
+  
+  .p-work__boxWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .p-work__box {
+    width: 30%;
+  }
+
+  .p-work__caption {
+    font-size: 0.9rem;
+  }
+}
+
+@include breakPoint("sp") {
+  .p-work__box {
+    margin-top: 50px;
+    
+		&:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .p-work__heading {
+    font-size: 1.2rem;
+  }
+
+  .p-work__caption {
+    font-size: 0.95rem;
+  }
+}

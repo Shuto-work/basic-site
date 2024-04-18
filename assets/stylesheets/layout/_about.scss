@@ -1,0 +1,13 @@
+.l-about {
+  @include breakPoint("pc") {
+    padding: $paddingPc;
+  }
+
+  @include breakPoint("sp") {
+    padding: $paddingSp;
+  }
+
+  @include breakPoint("small-screen") {
+    padding: $paddingSmallScreen;
+  }
+}

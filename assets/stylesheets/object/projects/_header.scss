@@ -1,0 +1,54 @@
+@include breakPoint("pc") {
+  .p-header {
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: relative;
+  }
+
+  .p-header__logo {
+    width: 50px;
+    height: auto;
+  }
+
+  .p-header,
+  .p-header__nav-list {
+    display: flex;
+  }
+
+  .p-header__nav-list {
+    column-gap: 30px;
+  }
+
+  .p-header__nav-item {
+    list-style: none;
+    color: $whiteColor;
+  }
+}
+
+@include breakPoint("sp") {
+  .p-header__hamburger {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .p-header__hamburger-line {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: $whiteColor;
+    
+		&:nth-child(1) {
+      top: 10px;
+    }
+
+    &:nth-child(2) {
+      top: 20px;
+    }
+  }
+}

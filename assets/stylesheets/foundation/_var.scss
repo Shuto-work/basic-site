@@ -1,0 +1,49 @@
+//各セクションのレイアウト余白
+$paddingPc: 100px 50px;
+$paddingSp: 70px 20px;
+$paddingSmallScreen: 70px 15px;
+
+//カラー
+$whiteColor: #ffffff;
+$accentColor: #ffbf00; //ボタンとセクションボーダー
+
+//メディアクエリ
+$breakpoints: (
+  "pc": "screen and (min-width: 796px)",
+  "sp": "screen and (max-width: 795px)",
+  "medium-screen": "screen and (max-width: 375px)",
+  "small-screen": "screen and (max-width: 320px)",
+);
+
+@mixin breakPoint($key) {
+  @media #{map-get($breakpoints, $key)} {
+    @content;
+  }
+}
+
+@mixin p-blog__btn {
+  display: inline-block;
+  text-align: center;
+  background-color: $accentColor;
+  border: none;
+  border-radius: 3px;
+  color: $whiteColor;
+  height: 50px;
+  line-height: 50px;
+}
+
+@mixin p-firstView {
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+@mixin p-firstView__title {
+  color: $whiteColor;
+  font-weight: bolder;
+  position: absolute;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

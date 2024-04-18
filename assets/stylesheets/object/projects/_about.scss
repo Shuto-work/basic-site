@@ -1,0 +1,41 @@
+.p-about {
+  margin-top: 50px;
+}
+
+.p-about__img {
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+@include breakPoint("pc") {
+  .p-about__imgBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+  }
+
+  .p-about__img {
+    height: 300px;
+  }
+
+  .p-about__imgBig {
+    width: 60%;
+  }
+
+  .p-about__imgSmall {
+    width: 35%;
+  }
+}
+
+@include breakPoint("sp") {
+  .p-about__img {
+    margin-top: 20px;
+    height: 200px;
+    width: 100%;
+    
+		&:first-child {
+      margin-top: 0;
+    }
+  }
+}
