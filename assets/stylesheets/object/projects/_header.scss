@@ -1,3 +1,4 @@
+
 @include breakPoint("pc") {
   .p-header {
     justify-content: space-between;
@@ -27,6 +28,31 @@
 }
 
 @include breakPoint("sp") {
+  .p-header__nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #2c5eb7;
+
+    &.is-active {
+      display: block; // is-activeクラスがある時に表示
+    }
+  }
+  .p-header__nav-list {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .p-header__nav-item {
+    margin: 0 0 20px;
+  }
+
   .p-header__hamburger {
     position: absolute;
     top: 15px;
@@ -42,13 +68,27 @@
     height: 2px;
     border-radius: 4px;
     background-color: $whiteColor;
-    
-		&:nth-child(1) {
+
+    &:nth-child(1) {
       top: 10px;
     }
 
     &:nth-child(2) {
       top: 20px;
     }
+  }
+
+  .cross:nth-child(1) {
+    transform: rotate(45deg);
+    top: 15px; /* 中心に配置 */
+  }
+
+  .cross:nth-child(2) {
+    opacity: 0;
+  }
+
+  .cross:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 15px; /* 中心に配置 */
   }
 }
