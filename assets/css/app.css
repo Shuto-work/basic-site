@@ -298,7 +298,7 @@ body {
   }
 }
 .p-firstView {
-  background-image: url("../../images/hero.jpg");
+  background-image: url("../images/hero.jpg");
   background-size: cover;
   position: relative;
 }
