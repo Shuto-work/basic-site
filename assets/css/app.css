@@ -238,6 +238,23 @@ body {
   .p-header__nav-item {
     list-style: none;
     color: #ffffff;
+    position: relative;
+  }
+  .p-header__nav-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    bottom: -1px;
+    background-color: #ffffff;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.3s;
+  }
+  .p-header__nav-item a:hover::after {
+    transform: scale(1, 1);
+    transform-origin: left top;
   }
 }
 @media screen and (max-width: 795px) {
@@ -287,14 +304,14 @@ body {
   }
   .cross:nth-child(1) {
     transform: rotate(45deg);
-    top: 15px; /* 中心に配置 */
+    top: 15px;
   }
   .cross:nth-child(2) {
     opacity: 0;
   }
   .cross:nth-child(3) {
     transform: rotate(-45deg);
-    top: 15px; /* 中心に配置 */
+    top: 15px;
   }
 }
 .p-firstView {
@@ -355,6 +372,17 @@ body {
   border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.p-about__img:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+
+.show {
+  opacity: 1;
 }
 
 @media screen and (min-width: 796px) {
@@ -395,6 +423,11 @@ body {
 .p-work__icon {
   margin: 0 auto;
   width: 55px;
+}
+
+.p-work__icon:hover {
+  transform: scale(1.2);
+  transition: 0.1s;
 }
 
 .p-work__heading {
@@ -454,7 +487,17 @@ body {
   font-size: 1rem;
 }
 
+.p-blog__img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
 .p-blog__btn--more {
+  position: relative;
   display: inline-block;
   text-align: center;
   background-color: #ffbf00;
@@ -463,6 +506,7 @@ body {
   color: #ffffff;
   height: 50px;
   line-height: 50px;
+  cursor: pointer;
 }
 @media screen and (min-width: 796px) {
   .p-blog__btn--more {
@@ -483,6 +527,11 @@ body {
     height: 45px;
     line-height: 45px;
   }
+}
+
+.p-blog__btn--more:hover {
+  background-color: #fdd867;
+  transition: 0.2s;
 }
 
 .p-blog__content {

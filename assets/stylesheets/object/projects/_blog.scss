@@ -17,7 +17,18 @@
   font-size: 1rem;
 }
 
+.p-blog__img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
 .p-blog__btn--more {
+  position: relative;
+
   @include p-blog__btn;
 
   @include breakPoint("pc") {
@@ -36,6 +47,11 @@
     height: 45px;
     line-height: 45px;
   }
+}
+
+.p-blog__btn--more:hover{
+  background-color: #fdd867;
+  transition: 0.2s;
 }
 
 .p-blog__content {

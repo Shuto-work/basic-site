@@ -10,7 +10,10 @@
   margin: 0 auto;
   width: 55px;
 }
-
+.p-work__icon:hover{
+  transform: scale(1.2);
+  transition: 0.1s;
+}
 .p-work__heading {
   color: #505050;
   margin-top: 20px;

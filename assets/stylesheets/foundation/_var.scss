@@ -30,10 +30,11 @@ $breakpoints: (
   color: $whiteColor;
   height: 50px;
   line-height: 50px;
+  cursor: pointer;
 }
 
 @mixin p-firstView {
-  background-image: url("../../images/hero.jpg");
+  background-image: url("../images/hero.jpg");
   background-size: cover;
   position: relative;
 }

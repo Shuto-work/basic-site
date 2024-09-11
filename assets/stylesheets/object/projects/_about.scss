@@ -5,7 +5,18 @@
 .p-about__img {
   border-radius: 15px;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
+
+.p-about__img:hover{
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+.show {
+  opacity: 1;
+}
+
 
 @include breakPoint("pc") {
   .p-about__imgBox {
