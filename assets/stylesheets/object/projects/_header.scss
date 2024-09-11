@@ -2,7 +2,7 @@
 @include breakPoint("pc") {
   .p-header {
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 50px;
     align-items: center;
     position: relative;
   }
@@ -18,10 +18,12 @@
   }
 
   .p-header__nav-list {
-    column-gap: 30px;
+    column-gap: 40px;
   }
 
   .p-header__nav-item {
+    font-weight: bold;
+    font-size: 1.3rem;
     list-style: none;
     color: $whiteColor;
     position: relative;
